@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<!--
+  A small task tracker app.
+  Tasks are stored in localStorage, so they persist across page reloads.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header section -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-top">
+        <h1>Task Tracker</h1>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+      </div>
+      <p class="subtitle">Add tasks, mark done, and stay on top of your day.</p>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- Task input form -->
+    <section class="card">
+      <form id="task-form" class="task-form" autocomplete="off">
+        <div class="form-row">
+          <label for="task-title">Task</label>
+          <input id="task-title" name="title" type="text" placeholder="e.g. Buy groceries" required maxlength="120" />
+        </div>
+        <div class="form-row">
+          <label for="task-desc">Details (optional)</label>
+          <textarea id="task-desc" name="description" placeholder="Add a note or detail"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="task-due">Due Date (optional)</label>
+          <input id="task-due" name="dueDate" type="date" />
+        </div>
+        <button type="submit" class="primary">Add Task</button>
+      </form>
+    </section>
+
+    <!-- Task list, filtering, and bulk actions -->
+    <section class="card" aria-label="Task list">
+      <div class="card-header">
+        <h2>My Tasks</h2>
+        <div class="filter-group" role="group" aria-label="Filter tasks">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="active">Active</button>
+          <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <button id="clear-completed" class="secondary">Clear completed</button>
+      </div>
+      <ul id="tasks" class="task-list" aria-live="polite"></ul>
+      <div id="empty" class="empty-state">
+        <p>No tasks yet — add one above!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>TASK MANAGER</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
