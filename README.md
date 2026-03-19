@@ -3,6 +3,9 @@
 A lightweight, single‑page task tracker built with **vanilla HTML/CSS/JavaScript**.
 Data is stored locally in the browser via `localStorage`, so no backend is required.
 
+## 🌐 Live Demo
+[View Live](https://ghostarnab.github.io/TaskTracker/)
+
 ## ✅ Features
 - Add tasks (title + optional description)
 - Filter tasks (All / Active / Completed)
@@ -21,7 +24,14 @@ Data is stored locally in the browser via `localStorage`, so no backend is requi
 npx serve .
 ```
 
-## 📦 Deploy (Vercel or Netlify)
+## 📦 Deploy
+### GitHub Pages (Recommended)
+1. Push this project to GitHub.
+2. Go to repo **Settings** → **Pages**.
+3. Under **Source**, select **"Deploy from a branch"**.
+4. Choose **Branch: master**, **Folder: /(root)**.
+5. Click **Save** — your site will be live at `https://yourusername.github.io/repo-name/`.
+
 ### Vercel
 1. Push this project to GitHub.
 2. Install the [Vercel CLI](https://vercel.com/download) (optional):
